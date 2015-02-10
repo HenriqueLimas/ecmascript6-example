@@ -1,4 +1,4 @@
-import Person from './modules/first-class';
+import Person from './modules/person';
 
 var lukeSkywalker = new Person('Luke', 'Skywalker');
 

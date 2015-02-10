@@ -2,7 +2,7 @@
 
 var _interopRequire = function (obj) { return obj && obj.__esModule ? obj["default"] : obj; };
 
-var Person = _interopRequire(require("./modules/first-class"));
+var Person = _interopRequire(require("./modules/person"));
 
 var lukeSkywalker = new Person("Luke", "Skywalker");
 
