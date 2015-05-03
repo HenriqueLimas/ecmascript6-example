@@ -1,11 +1,13 @@
-"use strict";
+define(['exports', './modules/person'], function (exports, _modulesPerson) {
+  'use strict';
 
-var _interopRequire = function (obj) { return obj && obj.__esModule ? obj["default"] : obj; };
+  function _interopRequire(obj) { return obj && obj.__esModule ? obj['default'] : obj; }
 
-var Person = _interopRequire(require("./modules/person"));
+  var _Person = _interopRequire(_modulesPerson);
 
-var lukeSkywalker = new Person("Luke", "Skywalker");
+  var lukeSkywalker = new _Person('Luke', 'Skywalker');
 
-console.log("First name", lukeSkywalker.firstName);
-console.log("Last name", lukeSkywalker.lastName);
-console.log("Full name", lukeSkywalker.fullName);
+  console.log('First name', lukeSkywalker.firstName);
+  console.log('Last name', lukeSkywalker.lastName);
+  console.log('Full name', lukeSkywalker.fullName);
+});

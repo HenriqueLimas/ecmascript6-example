@@ -1,27 +1,27 @@
-"use strict";
+define(['exports', 'module'], function (exports, module) {
+	'use strict';
 
-var _prototypeProperties = function (child, staticProps, instanceProps) { if (staticProps) Object.defineProperties(child, staticProps); if (instanceProps) Object.defineProperties(child.prototype, instanceProps); };
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-var _classCallCheck = function (instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } };
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
-var Person = (function () {
-	function Person(firstName, lastName) {
-		_classCallCheck(this, Person);
+	var Person = (function () {
+		function Person(firstName, lastName) {
+			_classCallCheck(this, Person);
 
-		this.firstName = firstName;
-		this.lastName = lastName;
-	}
-
-	_prototypeProperties(Person, null, {
-		fullName: {
-			get: function () {
-				return this.firstName + " " + this.lastName;
-			},
-			configurable: true
+			this.firstName = firstName;
+			this.lastName = lastName;
 		}
-	});
 
-	return Person;
-})();
+		_createClass(Person, [{
+			key: 'fullName',
+			get: function () {
+				return this.firstName + ' ' + this.lastName;
+			}
+		}]);
 
-module.exports = Person;
+		return Person;
+	})();
+
+	module.exports = Person;
+});
